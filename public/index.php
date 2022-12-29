@@ -1,6 +1,6 @@
 <?php
 
-switch ($_SERVER['PATH_INFO']){
+switch ($_SERVER['PATH_INFO']){                                 /* $_SERVER['PATH_INFO']: Atraves dela podemos obter a Url */
     case '/listar-cursos':
         require 'listar-cursos.php';
         break;
