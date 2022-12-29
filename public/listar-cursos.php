@@ -15,11 +15,11 @@ $cursos = $repositorioDeCursos->findAll();
 <body>
 <div class="container">
     <div class="jumbotron">
-        <h1>Listar cursos</h1>
-    </div>
-    <a href="formulario-novo-curso.php" class="btn btn-primary mb-2">
+        <h1>Listar cursos</h1>    
+    <a href="/novo-curso" class="btn btn-primary mb-2">
         Novo Curso
     </a>
+    </div>
     <ul class="list-group">
         <?php foreach ($cursos as $curso): ?>
             <li class="list-group-item">
