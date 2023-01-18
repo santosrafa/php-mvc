@@ -1,8 +1,9 @@
 <?php
 
-    $dbPath = __DIR__ . '/banco.sqlite';
-    $pdo = new PDO("sqlite:$dbPath");
-    $videoList = $pdo->query('SELECT * FROM videos;')->fetchAll(\PDO::FETCH_ASSOC);
+$dbPath = __DIR__ . '/banco.sqlite';
+$pdo = new PDO("sqlite:$dbPath");
+$videoList = $pdo->query('SELECT * FROM videos;')->fetchAll(\PDO::FETCH_ASSOC);
+
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,7 +24,7 @@
     <header>
 
         <nav class="cabecalho">
-            <a class="logo" href="./index.html"></a>
+            <a class="logo" href="/"></a>
 
             <div class="cabecalho__icones">
                 <a href="./pages/enviar-video.html" class="cabecalho__videos"></a>
@@ -43,7 +44,7 @@
             <div class="descricao-video">
                 <h3><?= $video['title']; ?></h3>
                 <div class="acoes-video">
-                    <a href="./pages/enviar-video.html">Editar</a>
+                    <a href="/formulario.php?id=<?= $video['id']; ?>">Editar</a>
                     <a href="/remover-video.php?id=<?= $video['id']; ?>">Excluir</a>
                 </div>
             </div>
@@ -51,4 +52,5 @@
         <?php endforeach; ?>
     </ul>
 </body>
+
 </html>
