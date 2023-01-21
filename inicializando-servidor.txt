@@ -1,3 +1,6 @@
 Inicia a execução de um servidor web embutido do PHP em nossa máquina, na porta 8080.
 
 php -S localhost:8080
+
+O php só acessará a pasta public
+php -S localhost:8080 -t public/
